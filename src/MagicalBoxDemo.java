@@ -1,5 +1,10 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+/*
+ * Description: The program creates a box with dimensions of width, height and length.
+ * The box can also store 10 items
+ * @author: Isaac Jimenez
+ * @version: 1.0
+ *
+ * */
 public class MagicalBoxDemo {
     public static void main(String[] args) {
         //create instance
@@ -24,7 +29,7 @@ public class MagicalBoxDemo {
             box.addItem("bed");
             box.addItem("pillow");
             box.removeItem();
-            box.addItem("bed");
+            box.addItem("dog");
             box.printItems();
             box.removeItem();
             box.removeItem();

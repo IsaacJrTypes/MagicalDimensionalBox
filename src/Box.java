@@ -1,16 +1,14 @@
-import java.util.Arrays;
-
+/* Description: The class creates instances of a box using width, height, and depth for dimensions.
+ * removeItem function uses Last In,First Out (LIFO) method to remove items in array
+ * */
 public class Box {
-    //var for width, height, and depth
-    double width;
-    double height;
-    double depth;
+    private double width;
+    private double height;
+    private double depth;
     //index for stack like behavior
-    int index = 0;
-    //String Array of 10 items
-    String[] items = new String[10];
+    private int index = 0;
+    private String[] items = new String[10];
 
-    //constructor for instantiation
     public Box(double width, double height, double depth) {
         if (width > 0 && height > 0 && depth > 0) {
             this.width = width;
@@ -39,7 +37,6 @@ public class Box {
 
     }
 
-    //remove item: behavior is Last In, First Out (LIFO)
     public void removeItem() {
         this.index -= 1;
         if (this.index > -1) {
@@ -52,7 +49,6 @@ public class Box {
 
     }
 
-    //print items using loop
     public void printItems() {
         System.out.print("items in box: ");
         for (int i = 0; i < this.index; i++) {
