@@ -20,33 +20,38 @@ public class Box {
     }
 
     //volume method
-    public String volume() {
-        return "Volume of box: " + this.width * this.height * this.depth;
+    public double volume() {
+        return Math.round(this.width * this.height * this.depth * 100.0) / 100.0;
     }
 
     //add item
-    public void addItem(String item) {
-        if (index < this.items.length) {
+    public boolean addItem(String item) {
+        if (hasSpace()) {
             this.items[this.index] = item;
             System.out.println("Added: " + item);
             this.index++;
-        } else {
-            System.out.println("The box has reached capacity: " + this.items.length + ", cannot add: " + item);
+            return true;
         }
+        return false;
+    }
 
+    public boolean hasSpace() {
+        return this.index < this.items.length;
+    }
+
+    public boolean removeItem() {
+        this.index -= 1;
+        if (hasItems()) {
+            System.out.println("removed: " + this.items[this.index]);
+            this.items[this.index] = null;
+            return true;
+        }
+        return false;
 
     }
 
-    public void removeItem() {
-        this.index -= 1;
-        if (this.index > -1) {
-            System.out.println("removed: " + this.items[this.index]);
-            this.items[this.index] = null;
-
-        } else {
-            throw new ArrayIndexOutOfBoundsException("Box is empty, nothing to remove");
-        }
-
+    public boolean hasItems() {
+        return this.index > -1;
     }
 
     public void printItems() {

@@ -15,33 +15,7 @@ public class MagicalBoxDemo {
             //box.removeItem();
             box.addItem("Teddy bear");
             box.addItem("Dice");
-            box.addItem("Rubber Ducky");
-            box.addItem("Chew Toy");
-            box.printItems();
-            box.removeItem();
-            box.printItems();
-            box.addItem("Car");
-            box.addItem("train");
-            box.addItem("plane");
-            box.addItem("bus");
-            box.addItem("shoe");
-            box.addItem("laptop");
-            box.addItem("bed");
-            box.addItem("pillow");
-            box.removeItem();
-            box.addItem("dog");
-            box.printItems();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            box.removeItem();
-            //box.removeItem();
+
         } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException e) {
             System.err.println(e.getMessage());
         }
