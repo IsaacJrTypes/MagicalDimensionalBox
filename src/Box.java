@@ -2,13 +2,22 @@
  * removeItem function uses Last In,First Out (LIFO) method to remove items in array
  * */
 public class Box {
+    //Width of box
     private double width;
+    //Height of box
     private double height;
+    //Depth of box
     private double depth;
     //index for stack like behavior
     private int index = 0;
+    //Array to hold items
     private String[] items = new String[10];
 
+    /**
+     * Box class only accepts positive values
+     *
+     * @throws IllegalArgumentException if dimensions are not met
+     */
     public Box(double width, double height, double depth) {
         if (width > 0 && height > 0 && depth > 0) {
             this.width = width;
@@ -35,6 +44,7 @@ public class Box {
         return false;
     }
 
+    //Checks if there is space in box
     public boolean hasSpace() {
         return this.index < this.items.length;
     }
@@ -47,9 +57,9 @@ public class Box {
             return true;
         }
         return false;
-
     }
 
+    //Checks if there are any items in box
     public boolean hasItems() {
         return this.index > -1;
     }

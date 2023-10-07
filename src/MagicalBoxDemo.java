@@ -16,7 +16,7 @@ public class MagicalBoxDemo {
             box.addItem("Teddy bear");
             box.addItem("Dice");
 
-        } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException e) {
+        } catch (IllegalArgumentException e) {
             System.err.println(e.getMessage());
         }
     }
